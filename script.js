@@ -329,6 +329,19 @@
     lastFocusedElement?.focus?.();
   });
 
+  const currentYear = new Date().getFullYear();
+  document.querySelectorAll("[data-auto-years]").forEach((element) => {
+    const baseYear = Number(element.dataset.baseYear);
+    const baseValue = Number(element.dataset.baseValue);
+    if (!Number.isFinite(baseYear) || !Number.isFinite(baseValue)) return;
+
+    const automaticValue = Math.max(0, baseValue + currentYear - baseYear);
+    element.textContent = String(automaticValue);
+    if (element.hasAttribute("data-count")) {
+      element.dataset.count = String(automaticValue);
+    }
+  });
+
   const counters = document.querySelectorAll("[data-count]");
   if (!prefersReducedMotion && "IntersectionObserver" in window) {
     counters.forEach((counter) => {
@@ -355,5 +368,5 @@
   }
 
   const yearTarget = document.querySelector("[data-current-year]");
-  if (yearTarget) yearTarget.textContent = String(new Date().getFullYear());
+  if (yearTarget) yearTarget.textContent = String(currentYear);
 })();
