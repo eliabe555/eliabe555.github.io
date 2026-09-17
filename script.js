@@ -6,11 +6,11 @@
       title: "Babaçu",
       category: "Animação 2D",
       year: "2024—2026",
-      role: "Animador 2D",
-      function: "Produção e execução de cenas animadas",
+      role: "Animador 2D e artista de VFX",
+      function: "Animação cut-out e frame a frame; VFX do elemento fogo",
       production: "Muirak Studio",
       description:
-        "Curta de aventura e fantasia ambientado em uma Belém encantada. Eliabe participou do desenvolvimento e da execução de cenas animadas ao longo da produção.",
+        "Curta de aventura e fantasia ambientado em uma Belém encantada. Eliabe atuou em animação cut-out e frame a frame, além dos efeitos visuais do elemento fogo.",
       image: "./assets/covers/babacu.webp",
       alt: "Cena do projeto de animação Babaçu",
       link: "https://muirak.com/projetos-autorais/projeto-baba%C3%A7u.html",
@@ -21,11 +21,11 @@
       title: "Menino Toquinho",
       category: "Animação 2D",
       year: "2024",
-      role: "Animador 2D",
-      function: "Animação de cenas",
-      production: "Muirak Studio / Búfalos TV",
+      role: "Animador 2D e animador VFX",
+      function: "Animação de cenas e VFX do elemento fogo",
+      production: "Muirak Studio / Búfalos TV / Warner Bros.",
       description:
-        "Trabalho realizado como integrante da equipe de animação da Muirak Studio, colaborando na produção 2D do projeto Menino Toquinho.",
+        "Trabalho realizado como integrante da equipe de animação da Muirak Studio, com animação 2D de cenas e efeitos visuais do elemento fogo.",
       image: "./assets/covers/menino-toquinho.jpg",
       alt: "Cena de Menino Toquinho",
       link: "https://www.youtube.com/watch?v=91d01xD2i7A",
@@ -51,11 +51,11 @@
       title: "Caminho Deserto",
       category: "Animação 2D",
       year: "2024—2025",
-      role: "Animador 2D",
-      function: "Animação de cenas",
+      role: "Animador 2D e artista de cenários",
+      function: "Animação frame a frame e arte de cenários",
       production: "Pós-graduação em Animação 2D da Méliès",
       description:
-        "Projeto desenvolvido no contexto da pós-graduação em Animação 2D da Méliès, com atuação de Eliabe na animação de cenas.",
+        "Projeto desenvolvido no contexto da pós-graduação em Animação 2D da Méliès, com atuação em animação frame a frame e criação de cenários.",
       image: "./assets/covers/caminho-deserto.jpg",
       alt: "Cena da animação Caminho Deserto",
       link: "https://www.youtube.com/watch?v=u6c-n8CChHw",
@@ -63,14 +63,14 @@
       portrait: false,
     },
     "uma-nova-luz": {
-      title: "Uma Nova Luz: A Arte da Reciclagem de Ideias",
-      category: "Direção & roteiro",
+      title: "Uma Nova Luz",
+      category: "Documentário narrativo",
       year: "2025",
-      role: "Diretor e roteirista",
-      function: "Direção e roteiro",
+      role: "Diretor, roteirista e animador",
+      function: "Direção, roteiro, pós-produção, edição, animação e storyboard",
       production: "Festival Alunos que Inspiram — FAQI",
       description:
-        "Curta-metragem autoral desenvolvido para o Festival Alunos que Inspiram. O projeto venceu a etapa regional do festival em 2025.",
+        "Documentário narrativo autoral desenvolvido para o Festival Alunos que Inspiram. O projeto venceu a etapa regional do festival em 2025.",
       image: "./assets/covers/uma-nova-luz.jpg",
       alt: "Cena do curta Uma Nova Luz: A Arte da Reciclagem de Ideias",
       link: "https://youtu.be/rYfqIQjrDZI?si=gAroUOVr_0E_SImB",
@@ -79,13 +79,13 @@
     },
     escuta: {
       title: "Escuta",
-      category: "Direção & roteiro",
+      category: "Documentário narrativo",
       year: "2026",
-      role: "Diretor e roteirista",
-      function: "Direção e roteiro",
+      role: "Diretor, roteirista e animador",
+      function: "Direção, roteiro, pós-produção, edição, animação e storyboard",
       production: "Festival Alunos que Inspiram — FAQI",
       description:
-        "Curta-metragem autoral desenvolvido para o Festival Alunos que Inspiram. O projeto venceu a etapa regional do festival em 2026.",
+        "Documentário narrativo autoral desenvolvido para o Festival Alunos que Inspiram. O projeto venceu a etapa regional do festival em 2026.",
       image: "./assets/covers/escuta.jpg",
       alt: "Cena do curta-metragem Escuta",
       link: "https://www.youtube.com/watch?v=tfWpcs5rXh8",
@@ -96,8 +96,8 @@
       title: "A Criança Presa no Mundo das Telas",
       category: "Ilustração editorial",
       year: "2024",
-      role: "Ilustrador",
-      function: "Ilustração do livro",
+      role: "Ilustrador, line artist e colorista",
+      function: "Colorização, ilustrações e line art",
       production: "Autora: Elis Nunes",
       description:
         "Livro infantil sobre Luca, um menino que redescobre experiências, talentos, amizades e a conexão com a natureza para além das telas.",
@@ -111,8 +111,8 @@
       title: "A Criança que Fazia Muitos Atos de Amor",
       category: "Ilustração editorial",
       year: "2024",
-      role: "Ilustrador",
-      function: "Ilustração do livro",
+      role: "Ilustrador, line artist e colorista",
+      function: "Colorização, ilustrações e line art",
       production: "Autora: Maitê Nunes",
       description:
         "Livro infantil sobre empatia, solidariedade e pequenos gestos capazes de transformar a escola, a família e a comunidade.",
@@ -126,8 +126,8 @@
       title: "As Crianças que Salvaram o Rio",
       category: "Ilustração editorial",
       year: "2025",
-      role: "Ilustrador",
-      function: "Ilustração do livro",
+      role: "Ilustrador, line artist e colorista",
+      function: "Colorização, ilustrações e line art",
       production: "Autoras: Elis Nunes e Maitê Nunes",
       description:
         "Obra infantil que retrata a vida nas comunidades ribeirinhas e apresenta o uso responsável dos recursos naturais por meio de uma aventura ilustrada.",
@@ -196,6 +196,7 @@
   const slideDots = [...document.querySelectorAll("[data-slide-dot]")];
   const slideCount = document.querySelector("[data-slide-count]");
   const nextSlideButton = document.querySelector("[data-slide-next]");
+  const heroPlayLink = document.querySelector("[data-hero-play]");
   const heroFrame = document.querySelector("[data-hero-frame]");
   let currentSlide = 0;
   let slideTimer;
@@ -210,6 +211,12 @@
       dot.setAttribute("aria-current", isActive ? "true" : "false");
     });
     if (slideCount) slideCount.textContent = `${String(currentSlide + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+    if (heroPlayLink) {
+      const activeSlide = slides[currentSlide];
+      heroPlayLink.href = activeSlide.dataset.projectLink;
+      heroPlayLink.textContent = activeSlide.dataset.actionLabel || "PLAY!";
+      heroPlayLink.setAttribute("aria-label", activeSlide.dataset.actionDescription || `Abrir ${activeSlide.dataset.projectTitle}`);
+    }
   };
 
   const startSlideTimer = () => {
@@ -294,6 +301,8 @@
     dialogFields.link.href = project.link;
     dialogFields.link.firstChild.textContent = `${project.linkLabel} `;
     dialogMedia?.classList.toggle("is-portrait", project.portrait);
+    dialog.classList.toggle("has-long-title", project.title.length > 25);
+    dialog.classList.toggle("has-extra-long-title", project.title.length > 38);
     dialog.showModal();
     document.body.classList.add("dialog-open");
   };

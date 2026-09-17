@@ -225,7 +225,7 @@ img {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(400px, 0.92fr);
   grid-template-areas:
     "copy visual"
     "stats stats";
@@ -234,7 +234,7 @@ img {
   max-width: 1440px;
   margin: 0 auto;
   padding: calc(var(--header-height) + 52px) max(32px, calc((100vw - var(--max-width)) / 2)) 44px;
-  gap: 40px 7vw;
+  gap: 40px clamp(44px, 5vw, 78px);
   overflow: hidden;
 }
 
@@ -264,7 +264,10 @@ img {
 }
 
 .hero-copy {
+  position: relative;
+  z-index: 2;
   grid-area: copy;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -288,7 +291,7 @@ img {
 .hero h1 {
   margin: 0;
   font-family: "Syne", sans-serif;
-  font-size: clamp(3.55rem, 7.55vw, 7.35rem);
+  font-size: clamp(3.55rem, 6vw, 6.45rem);
   font-weight: 800;
   line-height: 0.79;
   letter-spacing: -0.085em;
@@ -306,7 +309,7 @@ img {
 .hero h1 .outline-word {
   color: transparent;
   -webkit-text-stroke: 1.3px rgba(242, 240, 233, 0.8);
-  transform: translateX(0.3em);
+  transform: translateX(0.16em);
 }
 
 .hero-role {
@@ -383,7 +386,8 @@ img {
 .hero-visual {
   position: relative;
   grid-area: visual;
-  width: min(100%, 570px);
+  z-index: 1;
+  width: min(100%, 530px);
   justify-self: end;
   perspective: 1200px;
 }
@@ -505,8 +509,13 @@ img {
 .hero-slide figcaption strong {
   display: block;
   font-family: "Syne", sans-serif;
-  font-size: clamp(1.7rem, 4vw, 3.1rem);
+  max-width: 92%;
+  font-size: clamp(1.55rem, 3.1vw, 2.75rem);
   line-height: 1;
+}
+
+.hero-slide-portrait img {
+  object-position: center 28%;
 }
 
 .frame-controls {
@@ -583,6 +592,15 @@ img {
   background: var(--coral);
   font-size: 0.78rem;
   transform: rotate(-12deg);
+  transition: transform 220ms var(--ease), background 220ms ease;
+}
+
+.sticker-two:hover,
+.sticker-two:focus-visible {
+  background: #ff8469;
+  outline: 3px solid var(--paper);
+  outline-offset: 4px;
+  transform: rotate(0deg) scale(1.08);
 }
 
 .hero-stats {
@@ -772,8 +790,8 @@ img {
 }
 
 .project-card.project-wide {
-  grid-column: span 8;
-  aspect-ratio: 16 / 7.6;
+  grid-column: span 4;
+  aspect-ratio: 4 / 3;
 }
 
 .project-card.project-portrait {
@@ -926,16 +944,16 @@ img {
 .about-section {
   position: relative;
   display: grid;
-  grid-template-columns: 0.28fr 1.15fr 0.7fr;
+  grid-template-columns: 1fr;
   align-items: start;
-  gap: 32px;
+  gap: 20px;
 }
 
 .about-section::before {
   position: absolute;
   inset: 7% 0 auto;
   z-index: -1;
-  height: 72%;
+  height: 78%;
   border-radius: 40px;
   background:
     linear-gradient(135deg, rgba(117, 102, 255, 0.1), transparent 55%),
@@ -955,7 +973,8 @@ img {
 }
 
 .about-copy {
-  padding: 72px 20px 25px 0;
+  max-width: 980px;
+  padding: 72px 44px 25px;
 }
 
 .about-lead {
@@ -1029,7 +1048,7 @@ img {
 }
 
 .experience-board {
-  grid-column: 2 / 4;
+  grid-column: 1;
   margin-top: 56px;
   border-top: 1px solid var(--line);
 }
@@ -1313,9 +1332,14 @@ img {
 
 .awards-section {
   display: grid;
-  grid-template-columns: 0.65fr 1.35fr;
+  grid-template-columns: minmax(0, 0.72fr) minmax(460px, 1.28fr);
   align-items: start;
   gap: 70px;
+}
+
+.awards-intro,
+.award-cards {
+  min-width: 0;
 }
 
 .awards-intro {
@@ -1333,6 +1357,7 @@ img {
 
 .award-cards {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
 }
 
@@ -1705,7 +1730,7 @@ img {
 
 .project-dialog {
   width: min(1080px, calc(100vw - 34px));
-  max-height: min(86vh, 780px);
+  max-height: min(88dvh, 720px);
   padding: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1732,7 +1757,8 @@ img {
 .dialog-shell {
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
-  min-height: 610px;
+  height: min(680px, 88dvh);
+  min-height: 0;
 }
 
 .dialog-close {
@@ -1765,7 +1791,7 @@ img {
 
 .dialog-media {
   position: relative;
-  min-height: 610px;
+  min-height: 0;
   overflow: hidden;
   background: #050506;
 }
@@ -1797,6 +1823,7 @@ img {
   flex-direction: column;
   justify-content: center;
   padding: 62px 46px 45px;
+  min-width: 0;
   overflow-y: auto;
 }
 
@@ -1820,9 +1847,19 @@ img {
 .dialog-content h2 {
   margin: 0;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.25rem, 4.6vw, 4.3rem);
+  font-size: clamp(2.2rem, 4vw, 3.75rem);
   line-height: 0.94;
   letter-spacing: -0.065em;
+}
+
+.project-dialog.has-long-title .dialog-content h2 {
+  font-size: clamp(2rem, 3.4vw, 3.15rem);
+  line-height: 0.98;
+}
+
+.project-dialog.has-extra-long-title .dialog-content h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.65rem);
+  line-height: 1;
 }
 
 .dialog-role {
@@ -1879,14 +1916,47 @@ img {
   transform: translateY(0);
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1180px) {
   .hero {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
     gap: 36px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 
   .hero h1 {
-    font-size: clamp(3.4rem, 7.5vw, 5.5rem);
+    font-size: clamp(3.4rem, 6.6vw, 5.5rem);
+  }
+
+  .awards-section {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-intro {
+    position: static;
+    max-width: 760px;
+  }
+
+  .award-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1040px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas: "copy" "visual" "stats";
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 62px);
+    gap: 48px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.8rem, 11vw, 6.8rem);
+  }
+
+  .hero-visual {
+    width: min(90%, 650px);
+    justify-self: center;
   }
 
   .project-card,
@@ -1900,7 +1970,7 @@ img {
   }
 
   .about-section {
-    grid-template-columns: 0.15fr 1fr 0.6fr;
+    grid-template-columns: 1fr;
   }
 
   .tools-section,
@@ -2085,6 +2155,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .award-cards {
+    grid-template-columns: 1fr;
+  }
+
   .awards-intro {
     position: static;
   }
@@ -2107,7 +2181,8 @@ img {
 
   .dialog-shell {
     grid-template-columns: 1fr;
-    max-height: 86vh;
+    height: auto;
+    max-height: calc(100dvh - 24px);
     overflow-y: auto;
   }
 
@@ -2168,6 +2243,28 @@ img {
 
   .hero-frame {
     border-radius: 18px;
+  }
+
+  .hero-slide figcaption {
+    right: 16px;
+    bottom: 14px;
+    left: 16px;
+  }
+
+  .hero-slide figcaption span {
+    font-size: 0.58rem;
+  }
+
+  .hero-slide figcaption strong {
+    font-size: clamp(1.15rem, 7vw, 1.75rem);
+  }
+
+  .slide-dots {
+    gap: 4px;
+  }
+
+  .slide-dots button.is-active {
+    width: 17px;
   }
 
   .sticker-one {
