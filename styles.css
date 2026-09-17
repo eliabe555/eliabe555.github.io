@@ -1335,8 +1335,9 @@ img {
 }
 
 .awards-section {
+  width: min(100%, calc(1400px + 64px));
   display: grid;
-  grid-template-columns: minmax(560px, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   align-items: start;
   gap: 48px;
 }
@@ -1353,7 +1354,7 @@ img {
 
 .awards-intro h2 {
   max-width: 100%;
-  font-size: clamp(2.8rem, 3.7vw, 3.7rem);
+  font-size: clamp(2.75rem, 3.7vw, 3.15rem);
   overflow-wrap: normal;
 }
 
