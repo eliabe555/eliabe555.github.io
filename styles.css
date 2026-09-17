@@ -23,10 +23,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 24px);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   min-width: 320px;
   overflow-x: hidden;
   background:
@@ -37,6 +41,22 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+}
+
+main,
+.site-footer {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body,
+  main,
+  .site-footer {
+    overflow-x: clip;
+  }
 }
 
 body.dialog-open {
@@ -1227,6 +1247,7 @@ img {
 .software-stage {
   position: relative;
   min-width: 0;
+  overflow: hidden;
   padding: 28px;
   border: 1px solid rgba(10, 10, 13, 0.15);
   border-radius: 28px;
@@ -1435,6 +1456,7 @@ img {
   position: relative;
   z-index: 2;
   align-self: end;
+  padding-bottom: 62px;
 }
 
 .award-card small {
@@ -2222,8 +2244,10 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 17vw, 5rem);
+    max-width: 100%;
+    font-size: clamp(2.75rem, 15vw, 4.4rem);
     line-height: 0.82;
+    overflow-wrap: anywhere;
   }
 
   .hero h1 .outline-word {
@@ -2300,7 +2324,17 @@ img {
   .about-copy h2,
   .tools-heading h2,
   .awards-intro h2 {
-    font-size: clamp(2.8rem, 15vw, 4.6rem);
+    max-width: 100%;
+    font-size: clamp(2.45rem, 13vw, 3.8rem);
+    overflow-wrap: anywhere;
+  }
+
+  .awards-intro h2 {
+    font-size: clamp(2.35rem, 12.5vw, 3.35rem);
+  }
+
+  .discipline-marquee {
+    transform: none;
   }
 
   .project-filters {
@@ -2382,6 +2416,7 @@ img {
 
   .award-card h3 {
     font-size: clamp(2rem, 11vw, 3.2rem);
+    overflow-wrap: anywhere;
   }
 
   .award-card > button {
